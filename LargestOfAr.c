@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+
+    int arr[10];
+    int n;
+    
+    //int size=6;
+    int index;
+    int largest;
+    printf("enter a size of array: ");
+    scanf("%d",&n);
+    printf("enter element of array: ");
+    for(int i=0;i<n;i++){
+    scanf("%d",&arr[i]);}
+    largest =arr[0];
+    index=0;
+    for(int i=1;i<n;i++){
+    if(arr[i]>largest)
+    largest=arr[i];
+    index =i;
+    }
+printf("largest element %d\n", largest);
+printf("Smallest element found at %d ",index);
+    return 0;
+} 
