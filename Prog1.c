@@ -1,57 +1,16 @@
 #include<stdio.h>
 int main(){
-  int month,day,year;
-  printf("enter month in number format: ");
-  scanf("%d",&month);
-  printf("enter an year:");
-  scanf("%d",&year);
-  switch(month){
-    case 1:
-        printf("January  --31 days");
-        break;
-        case 2:
-        if(year%4==0 && year%100!=0 || year%400==0){
-            printf("February --29 days");
-        }
-        else{
-            printf("February --28 days");
-        }
-        break;
-        case 3:
-        printf("March --31 days");
-        break;
-        case 4:
-        printf("April --30 days");
-        break;  
-        case 5:
-        printf("May --31 days");
-        break;
-        case 6:
-        printf("June --30 days");
-        break;
-        case 7:
-        printf("July --31 days");
-        break;
-        case 8:
-        printf("August --31 days");
-        break;
-        case 9:
-        printf("September --30 days");
-        break;
-        case 10:
-        printf("October --31 days");
-        break;
-        case 11:
-        printf("November --30 days");
-        break;
-        case 12:
-        printf("December --31 days");
-        break;
-        default:
-        printf("Invalid month");
-        break;   
-  }
+  int n,d1,d2,d3,d4;
+  int sum,swapped;
+  printf("Enter a four digit number: ");
+  scanf("%d",&n);
+  d1=n/1000;
+  d2=(n/100)%10;
+  d3=(n/10)%10;
+  d4=n%10;
+  sum=d1+d2+d3+d4;
+  printf("Sum of digits: %d\n", sum);
+  swapped=d4*1000+d3*100+d2*10+d1;
+  printf("Swapped number: %d\n", swapped);
 return 0;    
 }
-
-
